@@ -688,10 +688,70 @@ function quizDay3 () {
 
     console.log(1 == true);
 
+    const check = 4 > 3 && 'a' === 'a' 
+    const check1 = 8 >= 7 && 10 < 11 
+    const check2 = 1 == true && 0 == ''
+    
+    console.log (`This is first check ${check}, \n second ${check1} , \n third ${check2}`)
+
+    const pipe = 4 < 2 || 0 == false
+    const pipe1 = 'a' == 1 || 3 > 2 
+    const pipe2 = undefined == null || NaN === NaN
+    
+    console.log (`This is first pipe ${pipe}, \n second ${pipe1}, \n third ${pipe2}`)
+
+    const negate = !true 
+    const negate1 = !negate
+    const change = !isLigthOff
+    
+    console.log (`First negation ${negate}, \n second ${negate1} \n third ${change}`)
+
+    //Increment Operators
+    let count = 0
+    //pre-increment
+    console.log(++count)//1
+    console.log(++count)//2
+    //post-increment 
+    console.log(count++)//2
+    console.log(count)//3
+
+    console.log(" ")
+
+    //Decrement Operators
+    let count1 = 3
+    //pre-decrement 
+    console.log(--count1)
+    console.log(count1)
+    //post-decrement
+    console.log(count1--)
+    console.log(count1)
+
+
+    //Ternary Operators
+
+    let isRaining = true
+    isRaining
+        ? console.log ('You need a rain coat. ')
+        : console.log ('No need for a rain coat. ')
+    
+    let isRaining1 = false
+    isRaining1
+        ? console.log ('You need a rain coat. ')
+        : console.log ('No need for a rain coat. ')
+
+    let number = 5
+    number > 0
+        ? console.log(`The number ${number} is positive. `)
+        : console.log(`The number ${number} is negative. `)
+
+    let number1 = -1
+    number1 > 0
+        ? console.log(`The number ${number1} is positive. `)
+        : console.log(`The number ${number1} is negative. `)
 }
 
 
-
+quizDay3();
 
 
 
