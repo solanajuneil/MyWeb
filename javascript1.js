@@ -96,6 +96,7 @@ function tutorials(){
 var z; 
 let human;
 
+/*
 document.getElementById("button").onclick = function(){
     //let z = window.prompt("Enter a number");
     human = document.getElementById("name").value;
@@ -114,7 +115,7 @@ document.getElementById("button").onclick = function(){
         document.getElementById("h1").innerHTML = "The value of z, " + human + ", is not visible to 2 and 5";
     }
 }  
-
+*/
 
 function tutorialof30DaysOfDay1 (){
 
@@ -688,7 +689,8 @@ function quizDay3 () {
     console.log(1 == true);
 
 }
-quizDay3(); 
+
+
 
 
 
