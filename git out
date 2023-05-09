@@ -1,0 +1,72 @@
+[33mcommit bb0de6bd163be07b9857aac69ddde8178d8cb327[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: solanajuneil <solanajuneil@gmail.com>
+Date:   Tue May 9 17:51:02 2023 +0800
+
+    html edit
+
+[1mdiff --git a/Picture/Facebook_f_logo_(2021).svg.png b/Picture/Facebook_f_logo_(2021).svg.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..1d25599[m
+Binary files /dev/null and b/Picture/Facebook_f_logo_(2021).svg.png differ
+[1mdiff --git a/Picture/Instagram_logo_2016.svg.webp b/Picture/Instagram_logo_2016.svg.webp[m
+[1mnew file mode 100644[m
+[1mindex 0000000..9c43772[m
+Binary files /dev/null and b/Picture/Instagram_logo_2016.svg.webp differ
+[1mdiff --git a/Picture/download.jpg b/Picture/download.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..87658d7[m
+Binary files /dev/null and b/Picture/download.jpg differ
+[1mdiff --git a/Picture/images.png b/Picture/images.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..c658c2c[m
+Binary files /dev/null and b/Picture/images.png differ
+[1mdiff --git a/index.html b/index.html[m
+[1mindex 41964e0..8c4e497 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -7,9 +7,44 @@[m
+     <title>Document</title>[m
+ </head>[m
+ <body>[m
+[32m+[m[32m    <header>[m
+[32m+[m[32m        <nav>[m
+[32m+[m[32m            <ul>[m
+[32m+[m[32m                <li>HOME</li>[m
+[32m+[m[32m                <li>STORE</li>[m
+[32m+[m[32m                <li>ABOUT</li>[m
+[32m+[m[32m            </ul>[m
+[32m+[m[32m        </nav>[m
+[32m+[m[32m    </header>[m
+[32m+[m[32m    <hr>[m
+[32m+[m[32m    <h1>Yoasobi</h1>[m
+[32m+[m
+[32m+[m[32m    <section>[m
+[32m+[m[32m    <h2>About</h2>[m
+[32m+[m[32m    <p>Yoasobi (stylized in all caps) is a Japanese music superduo[m[41m [m
+[32m+[m[32m    formed by Sony Music Entertainment Japan, composed of Vocaloid[m[41m [m
+[32m+[m[32m    producer Ayase [ja], and singer-songwriter Ikura [ja].[m
+[32m+[m[32m    Represented by the slogan "novel into music",[m[41m [m
+[32m+[m[32m    the duo has released songs based on novels posted on Monogatary.com [ja],[m[41m [m
+[32m+[m[32m    a novel-centered social media operated by their label, which is also from various media like novels written by professional authors, books, letters, and plays.</p>[m
+[32m+[m[32m    <img src="Picture/download.jpg">[m[41m [m
+[32m+[m[32m    <p>after going viral on social media, Yoasobi's debut single, "Yoru ni Kakeru", gave them their breakthrough by reaching atop the Billboard Japan Hot 100 for six non-consecutive weeks and the 2020 year-end chart, and becoming the first song to be certified diamond for streaming by Recording Industry Association of Japan (RIAJ). It was followed by other successful singles, such as Blue Period-inspired "Gunjō", and anime series themes "Kaibutsu" for Beastars, "Shukufuku" for Mobile Suit Gundam: The Witch from Mercury and "Idol" for Oshi no Ko. In 2022, the duo collaborated with novelists–Rio Shimamoto, Mizuki Tsujimura, Miyuki Miyabe, and Eto Mori–released the short story collection Hajimete no, and performed the songs based on its stories.</p>[m
+[32m+[m[32m    </section>[m
+[32m+[m
+[32m+[m[32m    <footer>[m
+[32m+[m[32m        <h3>Yoasobi</h3>[m
+[32m+[m[32m        <ul>[m
+[32m+[m[32m            <li><img src="Picture/Facebook_f_logo_(2021).svg.png"></li>[m
+[32m+[m[32m            <li><img src="Picture/images.png" ></li>[m
+[32m+[m[32m            <li><img src="Picture/Instagram_logo_2016.svg.webp"></li>[m
+[32m+[m[32m        </ul>[m
+[32m+[m[32m    </footer>[m
+[32m+[m[32m<div>[m
+     <script src="javascript1.js">[m
+ [m
+ [m
+     </script>[m
+[32m+[m[32m</div>[m
+[32m+[m[41m    [m
+ </body>[m
+ </html>[m
+\ No newline at end of file[m

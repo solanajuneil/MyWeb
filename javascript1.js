@@ -748,6 +748,27 @@ function quizDay3 () {
     number1 > 0
         ? console.log(`The number ${number1} is positive. `)
         : console.log(`The number ${number1} is negative. `)
+
+    //alert('hello')
+    //alert('Error 404')//alert code 
+    
+     //const pro = prompt('requierd text', 'Input some data here: ')///prompt code 
+     //cosnole.log(pro)// this will show if is true/false
+     
+     /*let agree = confirm ('Are you sure you like to delete?'); 
+     console.log(agree)*/
+
+     const dateNow = new Date()
+     console.log(dateNow)//current Date
+     console.log(dateNow.getFullYear())//2023
+     console.log(dateNow.getDate())
+     console.log(dateNow.getMonth())
+     console.log(dateNow.getHours())
+     console.log(dateNow.getMinutes())
+     console.log(dateNow.getSeconds())
+     console.log(dateNow.getMilliseconds())
+     console.log(dateNow.getTime())
+   
 }
 
 
