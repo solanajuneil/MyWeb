@@ -769,14 +769,324 @@ function quizDay3 () {
      console.log(dateNow.getMilliseconds())
      console.log(dateNow.getTime())
    
+
+     console.log('Quiz for day 3')  
+     console.log()
+     //1. 
+     let firstName = 'Juneil'
+     let lastName  = 'Solana'
+     let country = 'Philippines'
+     let city = 'Zamboanga Sibugay'
+     var age = 21 
+     let status = 'Complicated'
+     var year = 2023
+     let arr = [firstName, lastName, country, city, age, status, year]
+     console.log(typeof(firstName))
+     console.log(typeof(lastName))
+     console.log(typeof(country))
+     console.log(typeof(city))
+     console.log(typeof(age))
+     console.log(typeof(status))
+     console.log(typeof(year))
+     //2.
+     console.log('10' == 10)
+     //3.
+     const par = parseInt('9.8')
+     console.log(par == 10)
+     //4. 
+     console.log('Trutly')
+     console.log(10 === 10)
+     console.log( '1.111' == 1.111) 
+     console.log(1 == true)
+     console.log('Falsely')
+     console.log(NaN === NaN)
+     console.log(null == ' ')
+     console.log(''== undefined)
+     //5.
+     let i = 4 > 3 
+     let ii = 4 >= 3 
+     let iii = 4 < 3 
+     let iv = 4 >= 4 
+     let v = 4 == 4 
+     let vi = 4 === 4
+     let vii = 4 != 4
+     let viii = 4 !== 4 
+     let ix = 4 != '4'
+     let x0 = 4 == '4'
+     let xi = 4 === '4'
+     let py = 'python'
+     let jar = 'jargon'
+     let xii = length.py != length.jar
+     console.log(i, ii, iii, iv, v , vi, vii, viii, ix, x0, xi, xii)
+    //6. 
+    let i1 = 4 > 3 && 10 < 12
+    let ii1 = 4 > 3 && 10 > 12 
+    let iii1 = 4 > 3 || 10 < 12 
+    let iv1 = 4 > 3 || 10 > 12 
+    let v1 = !(4>3)
+    let vi1 = !(4<3)
+    let vii1 = !(false)
+    let viii1 = !(4 > 3 && 10 < 12)
+    let ix1 = !(4 > 3 && 10 > 12 )
+    let x1 = !(4 === 4)
+    let dar = 'dragon'
+    const res = dar.includes('on') && py.includes('on')
+    console.log(i1, ii1, iii1, iv1, v1, vi1, vii1,viii1, ix1, x1, res)
+    //7.
+    const dayDate = new Date()
+    console.log('Today year is'  + dayDate.getFullYear())
+    console.log('The month today as a number is ' + dayDate.getMonth())
+    console.log('The Date today is ' + dayDate.getDate())
+    console.log('Day today as a number ' + dayDate.getDay())
+    console.log('The hours now is ' + dayDate.getHours())
+    console.log('The minutes now is ' + dayDate.getMinutes())
+    console.log('To find out the number of seconds elapsed from Jan 1, 1970 to now ' + Math.floor(Date.now()/1000))
+
+    //Exercises: Level 2 
+    //1.
+    /*
+    const base = prompt('Enter base: ')
+    const heigth = prompt('Enter height: ')
+    let area = 0.5 * base * heigth
+    alert(`The area of the triangle is ${area} `)*/
+    //2.
+    /*
+    const sideA = parseInt(prompt('Enter side a: '))
+    const sideB = parseInt(prompt('Enter side b: '))
+    const sideC = parseInt(prompt('Enter side c: '))
+    let triangle = sideA + sideB + sideC
+    console.log(`The perimeter of the triangle is ${triangle}`)*/
+    //3.
+    /*
+    const len = parseInt(prompt('Enter length: '))
+    const wid = parseInt(prompt('Enter width: ')) 
+    let answer = 2 * (len + wid)
+    alert(`The answer is ${answer}`) */
+    //4.
+    /*
+    const pi = 3.14
+    const radius1 = parseFloat(prompt('Enter radius: '))
+    let area = Math.floor(pi * radius1 * radius1)
+    alert(`The area of circle ${area}`)
+    let circumference = 2 * pi * radius1
+    alert(`The circumference of a circle is ${circumference}`)*/
+    //5. to 7.
+    /*const e1 = prompt('Enter the linear equation mx + b: ')
+    let slope = parseFloat(e1.slice(4,6))
+    let yIntercept = parseFloat(e1.slice(4))
+    let xIntercept = -yIntercept / slope
+    let slope2 = (10-2)/(6-2)
+    if (slope == slope2){
+        console.log(`Both slope are equal `)
+    }
+    else{
+        console.log(`slope are not equal `)
+    }
+    console.log(`The slope ${slope} ` + `The y-intercept ${yIntercept} ` + `The x-intercept ${xIntercept}`)
+    console.log(`The second slope ${slope2}`)*/
+   //8.
+   /*
+   const x_value = parseInt(prompt('Enter the value of x: '))
+   let y_value = x_value**2  + 6*x_value + 9
+   console.log(`The value of y is ${y_value}`)*/
+   //9.
+   /*
+   const hours = parseInt(prompt('Enter hours: '))
+   const rate_per = parseInt(prompt('Enter rate per hour: '))
+   let earning = hours * rate_per
+   console.log(`Your weekly earning is ${earning}`)*/
+   //10. 
+   /*  
+   const enter_name = prompt('Enter your name ')   
+   if (enter_name.length >= 7 ){
+    alert('Your name is long')
+   }
+   else {
+    alert('Your name is short')
+   }*/
+   //11.
+   let firstName_example = 'Asabeneh'
+   let lastName_example = 'Yetayeh'
+   if (firstName_example.length > lastName_example.length){ 
+    let condition = 'is longer than your family name'
+    console.log(`Your first name, ${firstName_example} ${condition}, ${lastName_example}`)
+   }
+   else{
+    let condition_one = 'is shorter than your family name'
+    console.log(`Your first name, ${firstName_example} ${condition_one}, ${lastName_example}`)
+   }
+   //12.
+   let myAge = 250 
+   let yourAge = 25
+   let error_or_trick = myAge - yourAge
+   if(error_or_trick < 0){
+    let error_or_trick1 = yourAge - myAge
+    console.log(`I am ${error_or_trick1} years older than you. `)
+    }
+   else if (myAge > yourAge){
+    console.log(`I am ${error_or_trick} years older than you. `)
+   }
+   //13.
+   /*
+   const birth = parseInt(prompt('Enter birth year: '))
+   const newDate = new Date ()
+   let result = parseInt(newDate.getFullYear()) - birth 
+   let allowed = 18 - result
+   if (result >= 18){
+    console.log(`You are ${result}. You are old enough to drive`)
+   }
+   else {
+    console.log(`You are ${result}. You will be allowed to drive after ${allowed} years. `)
+   }*/
+   //14.
+   const live = parseInt(prompt('Enter number of years you live:'))
+   
+   let youLived = 365 * 24 * 60 * 60 * live 
+   console.log(`You lived ${youLived} seconds. `)
+   //15.
+   const date = new Date();
+
+   // get the year, month, and day from the date object
+   
+   const month = date.getMonth() + 1;
+   const day = date.getDate();
+   
+   // get the hour and minute from the date object
+   const hour = date.getHours();
+   const minute = date.getMinutes();
+   
+   // format the date and time using the desired format
+   const formattedDate1 = `${year}-${month < 10 ? '0' + month : month}-${day < 10 ? '0' + day : day} ${hour < 10 ? '0' + hour : hour}:${minute < 10 ? '0' + minute : minute}`;
+   const formattedDate2 = `${day < 10 ? '0' + day : day}-${month < 10 ? '0' + month : month}-${year} ${hour < 10 ? '0' + hour : hour}:${minute < 10 ? '0' + minute : minute}`;
+   const formattedDate3 = `${day < 10 ? '0' + day : day}/${month < 10 ? '0' + month : month}/${year} ${hour < 10 ? '0' + hour : hour}:${minute < 10 ? '0' + minute : minute}`;
+   
+   // log the formatted dates to the console
+   console.log(formattedDate1);
+   console.log(formattedDate2);
+   console.log(formattedDate3);
 }
 
 
-quizDay3();
+function quizDay4(){
+    //if statement
+    /*let isRaining = false
+    let num = -2 
+    if (num  > 0 ) {
+        //console.log(`${num} is postive number`)
+    }
+    if(isRaining){
+        console.log(`Remember to take your rain coat. `)
+    }
+    else{
+        console.log(`No need for a rain coat`)
+    }
+    
+    //else statement
+    else{
+        console.log(`${num} is negative number `)
+    }*/
+    //else if staments 
+    /*
+    let a = 'letter a '
+    if(a > 0){
+        console.log(`${a} is a positive number `)
+    }
+    else if (a == 0){
+        console.log(`${a} is zero`)
+    }
+    else if (a < 0){ 
+        console.log(`${a} is negative number `)
+    }
+    else{
+        console.log(`${a} is not a number`)
+    }
+    let weather = 'sunny' 
+    if (weather === 'rainy'){
+        console.log('You need a rain coat')
+    }
+    else if (weather === 'cloudy'){
+        console.log('It migth be cold, You need a jacket')
+    }
+    else if(weather === 'sunny'){
+        console.log('Go out freely and bring unbrella for extreme heat')
+    }
+    else{
+        console.log('No need for rain coat')
+    }*/
+    /*
+    value = 'Setting'
+    switch (value){
+        case 'Click Menu':
+        case 'Menu':
+        case 'Go to Menu':
+        case 'See the Menu':
+            console.log('You are in Menu')
+            break
+        case 'Click Load':
+        case 'Load':
+        case 'Go to Load':
+        case 'See the Load':
+            console.log('You are in the Load Page')
+            break
+        case 'Click Setting':
+        case 'Setting':
+        case 'Go to Setting':
+        case 'See the Setting':
+            console.log('You are in the Setting')
+            break
+        default:
+            console.log('Exit.......')
+    
+    }
+    const inputDay = prompt('What day is today? ')
+    let day = inputDay.toLowerCase()
+    
+    switch (day){
+        case 'monday': 
+            console.log('Today is Monday')
+            break
+        case 'tuesday':
+            console.log('Today is Tuesday')
+            break
+        case 'wednesday': 
+            console.log('Today is Wednesday')
+            break
+        case 'thursday':
+            console.log('Today is Thursday')
+            break
+        case 'friday':
+            console.log('Today is Friday')
+            break
+        case 'saturday':
+            console.log('Today is Saturday')
+            break
+        case 'sunday': 
+            console.log('Today is Sunday')
+            break
+        default:
+            console.log('It is not a week day. ')
+    } 
+    let num = parseInt(prompt('Enter number'))
+    switch(true){
+        case num > 0:
+            console.log('Number is positive')
+            break 
+        case num < 0:
+            console.log('Number is negative')
+            break
+        case num === 0:
+            console.log('Number is zero')
+            break 
+        default: 
+            console.log('Not a Number')
+    }*/
+    let isRaining = 'sunny'
+    console.log(isRaining === 'cloudy' ?'You need a rain coat' :'No need for a rain coat')
+}
 
 
 
-
+quizDay4()
 
 
 function chatGPT()
