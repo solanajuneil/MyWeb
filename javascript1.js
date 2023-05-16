@@ -1213,51 +1213,101 @@ function quizDay4(){
 
 }
 
-// Prompt the user to enter a month
-const month = prompt("Enter a month:");
+function quizDay5 (){
 
-// Convert the input to lowercase
-const lowercaseMonth = month.toLowerCase();
+    const array = Array()
+    console.log(array) //empty array
 
-// Initialize a variable to store the number of days
-let days;
+    const arr = []
+    console.log(arr) //empty array
 
-// Determine the number of days based on the month and leap year
-switch (lowercaseMonth) {
-  case "january":
-  case "march":
-  case "may":
-  case "july":
-  case "august":
-  case "october":
-  case "december":
-    days = 31;
-    break;
-  case "april":
-  case "june":
-  case "september":
-  case "november":
-    days = 30;
-    break;
-  case "february":
-    const year = prompt("Enter a year:");
-    const numericYear = Number(year);
-    if ((numericYear % 4 === 0 && numericYear % 100 !== 0) || numericYear % 400 === 0) {
-      days = 29;
-    } else {
-      days = 28;
-    }
-    break;
-  default:
-    days = "Invalid month";
+    //example of arrays 
+    const number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9.64, 56.6]//array of numbers
+    const fruits = ['banana', 'orange', 'mango', 'cherry']//array of fruits
+    const colors = ['red', 'green', 'blue', 'yellow']//array of colors  
+    const animalsProducts = ['milk', 'meats', 'butter', 'yoghurt']//Arrays of products 
+    const webTechs = ['HTML','CSS', 'JavaScript', 'React']//Arrays of technologies
+    const country = ['Finland', 'Denmark', 'Sweden', 'Norway']//array of country 
+
+    console.log('Number:', number)
+    console.log('Number of number:', number.length)
+
+    console.log('Fruits:', fruits)
+    console.log('Number of fruits:', fruits.length)
+
+    console.log('Colors:', colors)
+    console.log('Number of colors:', colors.length)
+
+    console.log('Animals Products:', animalsProducts)
+    console.log('Number of animal products:', animalsProducts.length)
+
+    console.log('Web Technologies:', webTechs)
+    console.log('Number of web technologies:', webTechs.length)
+
+    console.log('Country:', country)
+    console.log('Number of Country', country.length)
+
+    const array_Another = [
+        'Asabaneh',
+        250,
+        true,
+        {contry: 'Finland', city: 'Helsinki'},
+        {skills: ['HTML', 'JavaScript', 'React']}
+    ]// arr containing different data types
+    console.log(array_Another)
+
+    //String array using split function by invidual word 
+    let js = 'JavaScript'
+    const charsInJavaScript = js.split('')
+    console.log(charsInJavaScript)
+
+    // String array using split function by comma
+    let companiesString = 'Facebook, Google, Twitter, Apple, Twitter'
+    const company = companiesString.split (',')
+    console.log(company)
+
+    //String array using split function by spaces
+    let txt = 'Lorem ipsum dolor sit amet, consectetur adipis dissect'
+    const words = txt.split(' ')
+    console.log(words)
+
+    //Array using index function
+    const frail = ["donut's", 'cheese', 'pizza', 'ham']
+    let firstFrail = frail[0]
+    let secondFrail = frail[1]
+    let thirdFrail = frail[2]
+    let lastFrail = frail.length - 1
+    console.log(firstFrail)// donut's
+    console.log(secondFrail)//cheese
+    console.log(thirdFrail)//pizza
+    console.log(lastFrail)//3
+
+    //Another array using index function
+    const numbers_sample = [0, 3.14, 9.85, 34, 98.5, 100]
+    console.log(numbers_sample.length)//Array length
+    console.log(numbers_sample)//Array of numbers
+    console.log(numbers_sample[0])//frist element
+    console.log(numbers_sample[5])//last element 
+    console.log(numbers_sample.length-1)//last element
+
+    //modify array with values
+    const country_sample = ['US',
+                    'Albania',
+                    'Andorra',
+                    'Bolivia',
+                    'Bosnia ',
+                    'Canada',  
+                    'Chile',
+                    'Colombia',
+                    'Costa Rica',
+                    'Cuba',
+                    'Dominican Republic'
+                    ]
 }
 
-// Display the number of days to the user
-console.log(`${month} has ${days} days.`);
+quizDay5()
 
 
-
-quizDay4()
 
 
 function chatGPT()
@@ -1315,7 +1365,3 @@ function chatGPT()
 
 
 }
-<div>
-    <h1>Hello
-    </h1>
-</div>
