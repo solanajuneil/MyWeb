@@ -1079,10 +1079,181 @@ function quizDay4(){
             break 
         default: 
             console.log('Not a Number')
-    }*/
+    }
     let isRaining = 'sunny'
-    console.log(isRaining === 'cloudy' ?'You need a rain coat' :'No need for a rain coat')
+    console.log(isRaining === 'cloudy' ?'You need a rain coat' :'No need for a rain coat')  
+    
+    //1.
+    const age_label = 18
+    const input_age = parseInt(prompt('Enter your age: '))
+    if(age_label < input_age){
+        alert('You are old enough to drive')
+    }
+    else if (17 === input_age){
+        alert(`You are left with 1 year to drive`)
+    }
+    else if (age_label > input_age){
+        let left = age_label - input_age 
+        alert(`You are left with ${left} years to drive`)
+    }
+    else if (age_label === input_age){
+        alert("You're 18 years old and you are legal to drive" )
+    }
+    else{
+        alert('Bruh get some help')
+    } 
+    //2.
+    const age_label = 21
+    const input_age = parseInt(prompt('Enter your age: '))
+    if(age_label > input_age){
+        left = age_label - input_age
+        console.log(`You are ${left} younger than me`)
+    }
+    else if (age_label < input_age){
+        left = input_age - age_label
+        console.log(`You are ${left} older than me`)
+    }
+    else if (age_label === input_age){
+        console.log(`We are in the same age`)
+    }
+    else {
+        console.log(`You didn't input you're age`)
+    } 
+    //3.
+    let a = 4
+    let b = 3
+    if (a > b){
+        console.log(`${a} is greater than ${b}`)
+    }
+    else { 
+        console.log(`${a} is less than ${b}`)
+    }
+    a > b 
+        ? console.log(`${a} is greater than ${b}`)
+        : console.log(`${a} is less than ${b}`)
+    
+    //4.
+    let sample_input = prompt('Enter a number: ')
+    if(sample_input % 2 == 0){
+        console.log(`${sample_input} is even number`)
+    }
+    else if (sample_input % 2 == 1){
+        console.log(`${sample_input} is odd number`)
+    }
+    else{
+        console.log('You input NaN')
+    }
+    
+   //5.
+    let grade = parseInt(prompt('Enter your grade: '))
+    if( grade >= 80 && grade <= 100 ){
+        console.log('You got an A ')
+    }
+    else if (grade >= 70 && grade < 80){
+        console.log('You got a B')
+    }
+    else if (grade >= 60 && grade < 70){
+        console.log('You got a C')
+    }
+    else if (grade >= 50 && grade < 60){
+        console.log('You got a D')
+    }
+    else if (grade >= 0  && grade < 50){
+        console.log('You got a F')
+    }
+    else {
+        console.log('Not a grade')
+    }
+
+    //6.
+   let seasons = prompt('Month is today? ')
+   let f_seasons = seasons.toLowerCase()
+   switch(f_seasons){
+
+        case 'september': 
+        case 'october' :
+        case 'november':
+            console.log('The season is Autumn')
+            break
+
+        case 'december' :
+        case 'january':
+        case  'february':
+            console.log('The season is Winter')
+            break
+
+        case 'march':
+        case 'april':
+        case 'may':
+            console.log('The season is Spring')
+            break
+
+        case 'june':
+        case 'july':
+        case 'august':
+            console.log('The season is Summer')
+            break
+
+        default:
+            console.log('Maybe a mispelled months')
+   } 
+   //7.
+   let day_today = prompt('What is the today? ')
+   let day = day_today.toLowerCase()
+   switch(day){
+    case 'saturday':
+        console.log('Saturday is a weekend')
+        break
+    case 'friday':
+        console.log('Friday is a working day')
+        break
+   }*/
+   //8.
+   
+
 }
+
+// Prompt the user to enter a month
+const month = prompt("Enter a month:");
+
+// Convert the input to lowercase
+const lowercaseMonth = month.toLowerCase();
+
+// Initialize a variable to store the number of days
+let days;
+
+// Determine the number of days based on the month and leap year
+switch (lowercaseMonth) {
+  case "january":
+  case "march":
+  case "may":
+  case "july":
+  case "august":
+  case "october":
+  case "december":
+    days = 31;
+    break;
+  case "april":
+  case "june":
+  case "september":
+  case "november":
+    days = 30;
+    break;
+  case "february":
+    const year = prompt("Enter a year:");
+    const numericYear = Number(year);
+    if ((numericYear % 4 === 0 && numericYear % 100 !== 0) || numericYear % 400 === 0) {
+      days = 29;
+    } else {
+      days = 28;
+    }
+    break;
+  default:
+    days = "Invalid month";
+}
+
+// Display the number of days to the user
+console.log(`${month} has ${days} days.`);
 
 
 
@@ -1105,5 +1276,46 @@ function chatGPT()
     
     console.log(`Total annual income is ${sum}.`);
     
+    //8.
+    // Prompt the user to enter a month
+    const month = prompt("Enter a month:");
+
+    // Convert the input to lowercase
+    const lowercaseMonth = month.toLowerCase();
+
+    // Initialize a variable to store the number of days
+    let days;
+
+    // Determine the number of days based on the month
+    switch (lowercaseMonth) {
+    case "january":
+    case "march":
+    case "may":
+    case "july":
+    case "august":
+    case "october":
+    case "december":
+        days = 31;
+        break;
+    case "april":
+    case "june":
+    case "september":
+    case "november":
+        days = 30;
+        break;
+    case "february":
+        days = 28;
+        break;
+    default:
+        days = "Invalid month";
+    }
+
+    // Display the number of days to the user
+    console.log(`${month} has ${days} days.`);
+
 
 }
+<div>
+    <h1>Hello
+    </h1>
+</div>
