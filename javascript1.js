@@ -1290,7 +1290,7 @@ function quizDay5 (){
     console.log(numbers_sample[5])//last element 
     console.log(numbers_sample.length-1)//last element
 
-    //modify array with values
+    //Modify array with values
     const country_sample = ['US',
                     'Albania',
                     'Andorra',
@@ -1303,6 +1303,75 @@ function quizDay5 (){
                     'Cuba',
                     'Dominican Republic'
                     ]
+    console.log(country_sample)
+    country_sample [0] = 'united states'
+    let lastIndex = country_sample.length -1
+    country_sample[lastIndex] = 'united kingdom'
+    console.log(country_sample)
+     
+    // Array using fill function
+    const eigthEmptyValues = Array(8)
+    const eigthXValue = Array(8).fill('Scams')
+    const eigth0Value = Array(8).fill(10)
+    console.log (eigth0Value)
+
+    //Array using concat function
+    const concat_sample = eigth0Value.concat(eigthXValue)
+    console.log(concat_sample)
+
+    //Array indexOf function
+    const numberSample = [1,2,3,4,5]
+    console.log(numberSample.indexOf(5))// 4
+    console.log(numberSample.indexOf(0))//-1
+    console.log(numberSample.indexOf(13))// -1
+    console.log(numberSample.indexOf(4))// 3
+
+    //Array if exists function with indexOf function
+    const fruitsSample =['banana', 'cherry', 'orange', 'apple', 'lemon', 'banana']
+    const ifExists = fruitsSample.indexOf('mango')
+    if(ifExists === -1 ){
+        console.log('The fruit did not exist in the fruit list')
+    }
+    else {
+        console.log('The fruit exists in the fruit list')
+    }
+    //Ternary examples 
+    ifExists === -1 
+        ? console.log('The fruit does not exist in the fruit list')
+        : console.log('The fruit exists in the fruit list')
+
+    //Array uses lastIndexOf function
+    console.log(fruitsSample.lastIndexOf('banana'))//5
+
+    //Array using includes function
+    const anotherNumberSample = [1,2,3,4,5]
+    console.log(anotherNumberSample.includes(1))
+    console.log(anotherNumberSample.includes(1.4))
+    console.log(fruitsSample.includes('apple'))
+    if(anotherNumberSample.includes(6)=== true){
+        console.log('The number exists')
+    }
+    else{
+        console.log('The number does not exist')
+    }
+    
+    const webTechsSample = [
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'React'
+    ]
+    console.log(webTechsSample.includes('HTML'))//True
+    console.log(webTechsSample.includes('Node.js'))//False
+
+    //Array using Array.isArray function
+    let webTwoTechsSample = 'Scam'
+    console.log(Array.isArray(fruitsSample))//True
+    console.log(Array.isArray(webTwoTechsSample))//False
+
+    //Array Converting array to string 
+    console.log(anotherNumberSample.toString())
+    console.log(fruitsSample.toString())
 }
 
 quizDay5()
