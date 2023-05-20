@@ -1214,7 +1214,7 @@ function quizDay4(){
 }
 
 function quizDay5 (){
-
+/*
     const array = Array()
     console.log(array) //empty array
 
@@ -1372,6 +1372,205 @@ function quizDay5 (){
     //Array Converting array to string 
     console.log(anotherNumberSample.toString())
     console.log(fruitsSample.toString())
+    
+    //Array using join function
+    console.log(webTechsSample)
+    console.log(webTechsSample.join('$ '))// This can join something in the last line
+    
+    //Array using slice function
+    console.log(anotherNumberSample.slice(0,4))//This can slice in the array by with range
+
+    //Array using splice function
+    console.log(anotherNumberSample.splice(2,3))// 3, 4, 5 
+    console.log(anotherNumberSample.splice()) // Remove all items 
+    anotherNumberSample.splice(1, 1, 10, 33, 44)
+    console.log(anotherNumberSample.splice(2, 2, 10, 33, 44))
+
+    //Array using push function
+    const arr1 = ['item1', 'item2', 'item3']
+    arr1.push('item4')// push string 
+    console.log(arr1)
+    arr1.push(3)// push number
+    console.log(arr1)
+    
+    //Array using pop function 
+    arr1.pop()//remove item from the end 
+    console.log(arr1)
+
+    //Array using shift function
+    arr1.shift()//remove item from the beginning 
+    console.log(arr1)
+
+    //Array using unshift function
+    arr1.unshift('item1')//add item from the beginning
+    console.log(arr1)
+
+    //Array using reverse function
+    arr1.reverse()//reverse the array
+    console.log(arr1)
+    arr1.reverse()//reverse the array back!!
+    console.log(arr1)
+
+    //Array using sort function
+    const arr2 = ['HTML', 'CSS', 'JavaScript', 'React', 'Node.Js', 'MongoDB', 'JSON']
+    arr2.sort()//sort the items
+    console.log(arr2)
+    arr2.reverse()//reverse the array
+    console.log(arr2)*/
+
+   
+    //1.
+    array = []
+    console.log(array)
+    //2.
+    var arr =  [1, 2, 3, 4, 5]
+    console.log(arr)
+    //3.
+    console.log(arr.length)
+    //4.
+    console.log(arr[0])//first item
+    console.log(arr[Math.floor(arr.length/2)])///middle item 
+    console.log(arr[arr.length - 1])//last item
+    //5. 
+    const mixedDataTypes =[1, 2, 3,
+            {  
+            name: 'Rabel',
+            age: 20,
+            country: 'France',
+            occupation:'Technical Engineer',
+            salary: 100000
+            },  
+            {
+            name: 'James',
+            age: 22,
+            country: 'England',
+            occupation:'Teacher',
+            salary: 23940
+            },
+            {
+            name: 'John',
+            age: 23,
+            country: 'USA',
+            occupation:'Student',
+            salary: 100
+            }
+    ]
+    console.log(mixedDataTypes.length)
+    //6.
+    const itCompanies = ['Facebook', 'Apple', 'Google' , 'IBM' , 'Microsoft', 'Orcale', 'Amazon' ]
+    //7.
+    console.log(itCompanies)
+    //8.
+    console.log(`There are ${itCompanies.length} companies in the array`)
+    //9.
+    console.log(itCompanies[0])//first item
+    console.log(itCompanies[Math.floor(itCompanies.length/2)])//middle item
+    console.log(itCompanies[itCompanies.length-1])//last item
+    //10.
+    for(let i = 0 ; i < itCompanies.length; i++){
+        console.log(itCompanies[i])
+    }
+    //11. 
+    for(let i = 0; i < itCompanies.length; i++){
+        console.log(itCompanies[i].toUpperCase())
+    }
+    //12.
+    console.log(`${itCompanies.join(', ')} are big IT companies.`)
+    //13.
+    let IBM = 'Twitter'
+    if(itCompanies.includes(`${IBM}`) === true){
+        console.log(`${IBM} is in the array`)
+    }
+    else {
+        console.log(`${IBM} is not in the array`)
+    }
+    //14.
+    
+
+    //15.
+    console.log(itCompanies.sort())
+    //16.
+    console.log(itCompanies.reverse())
+    //17. 
+    console.log(itCompanies.slice(3,7))
+    //18.
+    console.log(itCompanies.slice(0,4))
+    //19.
+    
+    // Use the slice method to get the middle IT company/ies
+    const middleCompanies = itCompanies.slice(Math.floor(itCompanies.length / 2), Math.ceil(itCompanies.length / 2));
+
+    // Display the middle IT company/ies
+    console.log('Middle IT Company/ies:', middleCompanies);
+
+    //20.
+    console.log(itCompanies.shift())
+    //21.
+    const itCompanies1 = ['Facebook', 'Apple', 'Google' , 'IBM' , 'Microsoft', 'Orcale', 'Amazon' ]
+    const middleIndex = Math.floor(itCompanies1.length / 2)
+    const ifItIsEven = itCompanies1.length % 2 === 0 
+    if(ifItIsEven){
+        itCompanies1.splice(middleIndex -1 , 2)
+    }
+    else{
+        itCompanies1.splice(middleIndex , 1)
+    }
+    console.log(itCompanies1)
+    //22.
+    console.log(itCompanies.pop())
+    //23.
+    const removeAllItems = itCompanies.splice()
+    console.log(removeAllItems)
+    //24. 
+    console.log(countries)
+    console.log(webTechs)
+
+    //25. 
+    let text = 'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.'
+    let stringToArray = text.split(" ")
+    console.log(stringToArray)
+    console.log(stringToArray.length)
+
+    //26.
+    const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey']
+    shoppingCart.unshift('Meat')
+    shoppingCart.push('Sugar')
+    console.log(shoppingCart)
+    const indexIsTrue = shoppingCart.indexOf('Honey')
+    if(indexIsTrue !== -1){
+        shoppingCart.splice(indexIsTrue,1)
+    }
+    const indexIsTrueAnother = shoppingCart.indexOf('Tea')
+    if(indexIsTrueAnother!== -1){
+            shoppingCart[indexIsTrueAnother] = 'Gree Tea'
+        }
+    console.log(shoppingCart)   
+
+    //27. 
+    const checkIfExists = countries.indexOf('Ethiopia')
+    if(checkIfExists !== -1){
+        console.log('ETHIOPIA')
+    }
+    else{
+        countries.push('Ethiopia')
+        console.log(countries)
+    }
+    //28.
+    const checkIfExists2 = webTechs.indexOf('Sass')
+    if(checkIfExists2 !== -1){
+        console.log('Sass is a CSS preprocess')
+    }
+    else{
+        webTechs.push('Sass')
+        console.log(webTechs)
+    }
+
+    //29.
+    const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+    const backEnd = ['Node','Express', 'MongoDB']
+    let fullStack = frontEnd.concat(backEnd)
+    console.log(fullStack)
+
 }
 
 quizDay5()
@@ -1432,5 +1631,16 @@ function chatGPT()
     // Display the number of days to the user
     console.log(`${month} has ${days} days.`);
 
+    // Example array of companies
+    const companies = ['Google', 'Microsoft', 'Facebook', 'Amazon', 'Apple'];
+
+    // Use the filter method to filter out companies with more than one 'o'
+    const filteredCompanies = companies.filter(company => {
+    const count = company.toLowerCase().split('o').length - 1;
+    return count > 1;
+    });
+
+    // Display the filtered companies
+    console.log('Filtered Companies:', filteredCompanies);
 
 }
