@@ -1,4 +1,4 @@
-const countries = [
+let countries = [
     'Albania',
     'Bolivia',
     'Canada',
@@ -9,5 +9,6 @@ const countries = [
     'Hungary',
     'Ireland',
     'Japan',
+    'Easddfasdfasdf',
     'Kenya'
   ]
