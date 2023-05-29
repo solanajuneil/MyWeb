@@ -9,6 +9,5 @@ let countries = [
     'Hungary',
     'Ireland',
     'Japan',
-    'Easddfasdfasdf',
     'Kenya'
   ]

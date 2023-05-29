@@ -1756,7 +1756,7 @@ function quizDay6() {
         if (primeNumber) {
              console.log(i)
          }
-    }*/
+    }
     //10.
     let sumOfAllNumbers = 0
     for (let i = 0; i <= 100; i++) {
@@ -1885,10 +1885,831 @@ function quizDay6() {
     //24.
     const longestCountry = countries.reduce((longest, country) => {
         return country.length > longest.length ? country : longest
-    }, [])
+    }, ' ')
     console.log(longestCountry)
+    
+    //25. 
+    const countriesThatOnlyHasFiveCharacters = countries.filter(country => country.length === 5)
+    console.log(countriesThatOnlyHasFiveCharacters)
+
+    //26.
+    const longestWebtechs = webTechs.reduce((longest, tech) => {
+        return tech.length > longest.length ? tech : longest
+    }, '')
+    console.log(longestWebtechs)
+
+    //27.
+    const webTechsCombineWithLength = webTechs.map(tech => [tech, tech.length])
+    console.log(webTechsCombineWithLength)
+
+    //28.
+    let mernStack = ['MongoDB', 'Express', 'React', 'Node']
+    const mernStackAcronym = mernStack.map(mern => mern.slice(0, 1)).join('')
+    console.log(`${mernStackAcronym.toLowerCase()}Stack`)
+
+    //29.
+    for (print of mernStack) {
+        console.log(print)
+    }
+    
+    //30. 
+    const fruitArray = ['banana', 'orange', 'mango', 'lemon']
+    let newFruitArray = []
+    for (fruit of fruitArray) {
+        newFruitArray.unshift(fruit)
+    }
+    console.log(newFruitArray)
+
+    //31. 
+    const fullStack = [
+        ['HTML', 'CSS', 'JS', 'React'],
+        ['Node', 'Express', 'MonogDB']
+    ]
+    console.log(fullStack.map(fullStack => fullStack))
+    
+    //32.   
+    let copycontries = countries
+    let sortedCountries = copycontries.sort()
+    webTechs.sort()
+    mernStack.sort()
+    const extractLandFromCountriesThatContainsTheWordLand = sortedCountries.filter(land => land.toLowerCase().includes('land'))
+    const extractAllhigestNumberCharacters = sortedCountries.reduce((longest, country) => {
+        return country.length > longest.length ? country : longest 
+    }, [])
+    const extractOnlyFourCharacters = sortedCountries.filter(country => country.length === 4)
+    const extractOnlyWithTwoLetters = sortedCountries.filter(country => country.includes(' '))
+    const reverseCountries = []
+    for (country of sortedCountries) { 
+        reverseCountries.push(country.split('').reverse().join('').toUpperCase())
+    }
+    console.log(reverseCountries)*/
 }
-    quizDay6()
+
+function quizDay7() {
+    /*
+    //Function example without paramater 
+    function square() {
+        let num = 2
+        let sq = num * num
+        console.log(sq)
+    }
+    square()//This is how to call a function
+
+    function addTwoNumber() {
+        let numberOne = 20
+        let numberTwo = 10
+        let sum = numberOne + numberTwo
+        console.log(sum)
+    }
+    addTwoNumber()//This is how to call a function
+
+    //Function example with paramater
+    function fullName() {
+        let firstName = 'Asabeneh'
+        let lastName = 'Yetayeh'
+        console.log(`${firstName} ${lastName}`)
+    }
+    fullName()
+
+    //Example Function with return value syntax 
+    function fullNameReal() {
+        let firstName = 'Asabeneh'
+        let lastName = 'Yetayeh'
+        let fullNameOfThePerson = (`${firstName} ${lastName}`)
+        return fullNameOfThePerson
+    }
+    console.log(fullNameReal())
+
+    //Example Function with return value syntax
+    function AddTwoNumbersReal() {
+        let firstNumber = 10
+        let secondNumber = 20
+        let sum = firstNumber + secondNumber
+        return sum
+    }
+    console.log(AddTwoNumbersReal())
+
+    //Example Function with parameter and return value 
+    function areaOfCircle(r) {
+        let area = Math.PI * r * r
+        return Math.round(area)
+    }
+    console.log(areaOfCircle(10))//The parameter is 10
+
+    function squareReal(number) {
+        let sq = number * number
+        return sq
+    }
+    console.log(squareReal(10))//The parameter is 10
+
+    //Example Function with two parameters and return value
+    function sumOfTheNumbers(numberOne, numberTwo) {
+        let sum = numberOne + numberTwo
+        return sum
+    }
+    console.log(sumOfTheNumbers(10, 40))//The parameters are 10 and 40
+
+    function printFullName(firstName, lastName) {
+        let fullName = (`${firstName} ${lastName}`)
+        return fullName
+    }
+    console.log(printFullName('Asabeneh', 'Yetayeh'))//The parameters are 'Asabeneh' and 'Yetayeh'
+
+    //Example of function with multiple parameters
+    function withMultipleParameters(arr) {
+        let sum = 0
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i]
+        }
+        return sum
+    }
+    const numbers = [1, 2, 3, 4, 5, 6]
+    console.log(withMultipleParameters(numbers))//The multiple parameters is the number array
+    
+    const squareWithArrowFunction = (number) => {
+        let square = number * number
+        return square
+    }
+    console.log(squareWithArrowFunction(10))//The parameter is 10
+
+    //Example of reusable function in which it just use it again 
+    function sumAllNumbers() {
+        let sum = 0
+        for (let i = 0; i < arguments.length; i++) {
+            sum += arguments[i]
+        }
+        return sum
+    }
+    console.log(sumAllNumbers(10, 20, 30, 40))
+    console.log(sumAllNumbers(-10, 20, -30, 40,))
+    console.log(sumAllNumbers(10, 20, 30, 40, -50))
+
+    //Example of arrow with ...args syntax
+    const sumAllNumbersUsingArrowFunction = (...args) => {
+        let sum = 0
+        for (element of args) {
+            sum += element
+        }
+        return sum
+    }
+    console.log(sumAllNumbersUsingArrowFunction(1, 2, 3, 4, 5, 100, 232.23))
+
+    //Example of anonymous function
+    const anonymousScam = function () {
+        console.log('I am an anonymous function and my value is stored in anonymousFun')
+    }
+    anonymousScam()
+
+    //Example of expression function 
+    const squareAgain = function(n) {
+        return n * n 
+    }
+    console.log(squareAgain(2))
+
+    //Example of Self Invoking function
+    //(function(n){console.log(n * n)}) (2)
+
+    //Arrow Function uses arrow
+    const squareAgainNumberTwo = n => { return n * n }
+    console.log(squareAgainNumberTwo(2))
+    
+    //Arrow explicit return 
+    const squareForSomeReasonAgain = n => n + n + n
+    console.log(squareForSomeReasonAgain(10))
+
+    //Example of Arrow function
+    const toUpperCaseCountries = (country) => {
+        let toUpperCaseCountry = []
+        for (loop of country) {
+            toUpperCaseCountry.push(loop.toUpperCase())
+        }
+        return toUpperCaseCountry
+    }
+    const countries1 = ['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']
+    console.log(toUpperCaseCountries(countries1))
+
+    //Example of Arrow function
+    const fullNameOfThePerson = (firstName,lastName) => {
+        return (`${firstName} ${lastName}`)
+    }
+    console.log(fullNameOfThePerson('Juneil', 'Solana'))
+
+    //Example of explicitly return 
+    const explicitReturn = (firstName, lastName) => { return (`${firstName} ${lastName}`) }
+    console.log(fullNameOfThePerson('Juneil', 'Solana'))
+
+    //Function with default value/s
+    const functionWithDefaultValue = (firstName = 'Steve') => {
+        return (`${firstName}, Welcome to 30Day of JavaScript!`)
+    }
+    console.log(functionWithDefaultValue())
+    console.log(functionWithDefaultValue('Neil'))
+
+    //Function with default value/s
+    const calculateTheBirthday = (birthday, currentyear = 2023) => {
+        return age  = currentyear - birthday
+    }
+    console.log(calculateTheBirthday(2001))
+
+    //Another Example of Function with default value/s
+    const weightOfObject = (mass, gravity = 9.81) => {
+        return weigth = (`${mass * gravity} N`)  
+    }
+    console.log('Weight of an object in Newton:', weightOfObject(100))
+    console.log('Weight of an object in Newton:', weightOfObject(100, 1.62))
+
+    //Example of Explicit function 
+    const weightOfTheObject = (mass, gravity = 9.81) => (`${mass * gravity} N`)
+    console.log(weightOfTheObject(100))
+    */
+    
+    //1. 
+    function fullName() {
+        console.log('Juneil E. Solana')
+    }
+    fullName()
+
+    //2.
+    function fullNameThatReturnsAValue(firstName, lastName) {
+        return (`${firstName} ${lastName}`)
+    }
+    console.log(fullNameThatReturnsAValue('Juneil E.', 'Solana'))
+    
+    //3. 
+    function addNumber(firstNumber, secondNumber) {
+        return firstNumber + secondNumber
+    }
+    console.log(addNumber(10, 20))
+    
+    //4.
+    function areaOfRectangle(length, width) {
+        return length * width
+    }
+    console.log(areaOfRectangle(5, 6))
+
+    //5.
+    function perimeterOfRectangle(length, width) {
+        return 2 * (length + width)
+    }
+    console.log(perimeterOfRectangle(5, 6))
+
+    //6. 
+    function volumeOfRectPrism(length, width, height) {
+        return length * width * height
+    }
+    console.log(volumeOfRectPrism(5, 6, 7))
+
+    //7.
+    function areaOfCircle(radius, pi = 3.14,) {
+        return pi * radius * radius
+    }
+    console.log(areaOfCircle(2))
+    
+    //8.
+    function circumOfCircle(radius, pi = 3.14) {
+        return 2 * pi * radius
+    }
+    console.log(circumOfCircle(2))
+
+    //9.
+    function calculateTheDensity(mass, volume) {
+        let density = mass / volume
+        if (density === Infinity) {
+            density = (`${undefined}`)
+        }
+        return density
+    }
+    console.log(calculateTheDensity(2, 0))
+
+    //10.
+    function calculateTheSpeed(totaldistance, time) {
+        let speed = Math.floor(totaldistance / time)
+        if (speed === Infinity) {
+            speed = (`${undefined}`)
+        }
+        return (`The speed is ${speed} per kilometers`)
+    }
+    console.log(calculateTheSpeed(1000, 25))
+
+    //11. 
+    const calculateTheWeight = (mass, gravity = 9.8) => {
+        return Math.floor(mass * gravity)
+    }
+    console.log(calculateTheWeight(10))
+
+    //12.
+    const convertCelsiusToFahrenheit = (celsius) => {
+        return (`${(celsius * 9 / 5) + 32} Fahrenheit`)
+    }
+    console.log(convertCelsiusToFahrenheit(32))
+
+    //13.
+    const canCalculateBMI = (weight, kilogram) => {
+        let BMI = weight / (kilogram ** 2)
+        switch (true) {
+            case BMI >= 30:
+                console.log(`Obese: BMI is 30 or more`)
+                break
+            case BMI >= 25:
+                console.log(`Overweigth: BMI is 25 to 29.9`)
+                break
+            case BMI >= 18.5:
+                console.log(`Normal weight : BMI is 18.5 to 24.9`)
+                break
+            case 18.5 >= BMI:
+                console.log(`Underweight: BMI is less than 18.5`)
+                break
+            default:
+                return BMI
+        }
+    }
+    canCalculateBMI(80, 1.65)
+
+    //14.
+    const checkSeason = (month) => {
+        if (month === 3 || month === 4 || month === 5) {
+            return 'Spring';
+        } else if (month === 6 || month === 7 || month === 8) {
+            return 'Summer';
+        } else if (month === 9 || month === 10 || month === 11) {
+            return 'Autumn';
+        } else if (month === 12 || month === 1 || month === 2) {
+            return 'Winter';
+        }
+    }
+
+    console.log(checkSeason(12));
+
+    //15. 
+    const findMax = (...agrs) => {
+        let max = Number.NEGATIVE_INFINITY
+        for (let i = 0; i < agrs.length; i++) {
+            if (agrs[i] > max) {
+                max = agrs[i]
+            }
+        }
+        return max
+    }
+    console.log(findMax(-3, -1, -11))
+
+    //16. 
+    const solveLinEquation = (a, b, c, x) => { return y = Math.round(((-a * x) - c) / b) }
+    console.log(solveLinEquation(2, 3, -4, 16))
+
+    //17. 
+    const solveQuadratic = (a, b, c) => {
+        let discriminant = b * b - 4 * (a * c)
+        if (discriminant > 0) {
+            let x = (-b + Math.sqrt(discriminant)) / (2 * a)
+            let x1 = (-b - Math.sqrt(discriminant)) / (2 * a)
+            return [x, x1]
+        }
+        else if (discriminant === 0) {
+            let x = -b / (2 * a)
+            return [x]
+        }
+        else {
+            return []
+        }
+    }
+    console.log(solveQuadratic(1, 4, 4))
+    console.log(solveQuadratic(1, 4, 4));
+    console.log(solveQuadratic(1, -1, -2));
+    console.log(solveQuadratic(1, 7, 12));
+    console.log(solveQuadratic(1, 0, -4));
+    console.log(solveQuadratic(1, -1, 0));
+
+    //18. 
+    const array = [1, 2, 3, 4, 5, 6, 7]
+    const printAll = (arr) => { arr.forEach((valeu => console.log(valeu))) }
+    printAll(array)
+
+    //19. 
+    const date = new Date()
+    const showDateTime = (date) => {
+        const formatcalendar = (`${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`)
+        const formatTime = (`${date.getHours()}:${date.getMinutes()}`)
+        console.log(formatcalendar, formatTime)
+    }
+    showDateTime(date)
+
+    //20.
+    const swapValues = (value1, value2) => {
+        let temp = value1
+        value1 = value2
+        value2 = temp
+        console.log(value1, value2)
+    }
+    swapValues(23, 32)
+
+    //21
+    let array1 = ['A', 'B', 'C', 'D', 'E', 'F']
+    const arrayReversed = (array1) => {
+        return array1.reverse()
+    }
+    console.log(arrayReversed(array1))
+    
+    //22.
+    const capitalizedArray = (array1) => {
+        for (let i = 0; i < array1.length; i++) {
+            array1[i] = array1[i].toLowerCase()
+        }
+        return array1
+    }
+    console.log(capitalizedArray(array1))
+
+    //23.
+    const item = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    const addItems = (arr) => {
+        const sum = arr.reduce((total, added) => total + added, 0)
+        return [sum]
+    }
+    console.log(addItems(item))
+
+    //24.
+    const removeItem = (array, index) => {
+        if (index < 0 || index >= array.length) {
+            return array
+        }
+        let newArray = [...array]
+        newArray.splice(index, 1)
+        return newArray
+    }
+    const currentArray = [1, 2, 3, 4, 5, 6, 7]
+    const removeItemIndex = 5
+    const newArray = removeItem(currentArray, removeItemIndex)
+    console.log(newArray)
+    
+    //25.
+    const sumOfNumbers = (firstNumber, secondNumber) => {
+        let sum = 0
+        for (let i = firstNumber; i <= secondNumber; i++) {
+            sum += i
+        }
+        return sum
+    }
+    console.log(sumOfNumbers(1, 2))
+
+    //26.
+    const sumOfOdds = (firstNumber, secondNumber) => {
+        let sum = 0
+        for (let i = firstNumber; i <= secondNumber; i++) {
+            if (i % 2 !== 0) {
+                sum += i
+            }
+        }
+        return sum
+    }
+    console.log(sumOfOdds(1, 5))
+    
+    //27.
+    const sumOfEvens = (firstNumber, secondNumber) => {
+        let sum = 0
+        for (let i = firstNumber; i <= secondNumber; i++) {
+            if (i % 2 === 0) {
+                sum += i
+            }
+        }
+        return sum
+    }
+    console.log(sumOfEvens(1, 5))
+    
+    //28.
+    const evensAndOdds = (number) => {
+        let sumOfAllEvens = 0
+        let sumOfAllOdds = 0
+        for (let i = 0; i <= number; i++) {
+            if (i % 2 === 0) {
+                sumOfAllEvens += 1
+            }
+            else {
+                sumOfAllOdds += 1
+            }
+        }
+        return (`The number of odds are ${sumOfAllOdds}. \n The number of evens are ${sumOfAllEvens}.`)
+    }
+    console.log(evensAndOdds(100))
+
+    //29.
+    const sum = (...agrs) => {
+        let result = 0
+        for (let i = 0; i < agrs.length; i++){
+            result += agrs[i]
+        }
+       return result
+    }
+    console.log(sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+
+    //30.
+    const randomUserIp = ()  => {
+       let random1 = Math.floor(Math.random() * 256)
+       return random1
+    }
+    console.log (`${randomUserIp()}.${randomUserIp()}.${randomUserIp()}.${randomUserIp()}`)
+
+    //31. 
+    const randomMacAddress = () => {
+        const random = 'ABCDEF01234567890'
+        let address = []
+
+        for (let i = 0; i < 6; i++) {
+            const firstDigit = random[Math.floor(Math.random() * random.length)]
+            const secondDigit = random[Math.floor(Math.random() * random.length)]
+        
+            address += firstDigit + secondDigit
+
+            if (i !== 5) {
+                address += ':'
+            }
+        }
+        return address
+    }
+    console.log(randomMacAddress())
+
+    //32. 
+    const randomHexNumberGenerator = () => {
+        const random = 'abcdef0123456789'
+        let address = ''
+        for (let i = 0; i < 6; i++) { 
+            address += random[Math.floor(Math.random()*random.length)]
+        }
+        return address
+    }
+    console.log(randomHexNumberGenerator())
+    
+    //33.
+    const userIdGenerator = () => { 
+        const random = 'abcdefghjklmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789'
+        let address = ''
+        for (let i = 0; i <= 7; i++) { 
+            address += random[Math.floor(Math.random()*random.length)]
+        }
+        return address
+    }
+    console.log(userIdGenerator())
+
+    //34.
+    /*
+    const userIdGeneratedByUser = () => {
+        let numberOfCharacter = prompt('Enter the number of characters:')
+        let numberOfIds = prompt('Enter the number of ids: ')
+        const random = 'abcdefghjklmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789'
+        let address = ''
+        for (let i = 0; i < numberOfIds; i++){
+            let id = ''
+            for (let j = 0; j < numberOfCharacter; j++){
+                address += random[Math.floor(Math.random()*random.length)]                
+            }
+            address += id + '\n'
+        }
+        return address
+    }
+    console.log(userIdGeneratedByUser())
+    */
+    
+    //35. 
+    const rgbColorGenerator = () => {
+        const redColor = Math.floor(Math.random() * 255)
+        const greenColor = Math.floor(Math.random() * 255)
+        const blueColor = Math.floor(Math.random() * 255)
+        return `rgb(${redColor},${greenColor},${blueColor})`
+    }
+    console.log(rgbColorGenerator())
+
+    //36. 
+    const arrayOfHexaColors = () => {
+        const hexDigits = '0123456789ABCDEF'
+        let hexColors = [] 
+        for (let j = 0; j < 3; j++) {
+            let hexColorAdded = ''
+            for (let i = 0; i < 6; i++) {
+                hexColorAdded += hexDigits[Math.floor(Math.random() * hexDigits.length)]
+            }
+            hexColors.push(hexColorAdded)
+        }
+        return hexColors
+    }
+    console.log(arrayOfHexaColors())
+
+    //37.
+    const arrayOfRgbColors = () => {
+        let rgbColors = [] 
+        for (let j = 0; j < 3; j++) {
+            let rgbColorAdded = ''
+            for (let i = 0; i < 1; i++) {
+                let red = Math.floor(Math.random() * 255)
+                let green = Math.floor(Math.random() * 255)
+                let blue = Math.floor(Math.random() * 255)
+                rgbColorAdded += `rgb(${red},${green},${blue})`
+            }
+            rgbColors.push(rgbColorAdded)
+        }
+        return rgbColors
+    }
+    console.log(arrayOfRgbColors())
+
+    //38.
+    const convertHexaToRgb = (hexColor) => {
+        if (hexColor.startsWith('#')) { 
+            hexColor = hexColor.substring(1)
+        }
+        const red = parseInt(hexColor.substring(0, 2) , 16)
+        const green = parseInt(hexColor.substring(2, 4), 16)
+        const blue = parseInt(hexColor.substring(4, 6), 16)
+        return `rgb(${red},${green},${blue})`
+    }
+
+    console.log(convertHexaToRgb("#0000FF"))
+   
+    //39.
+    const convertRgbToHex = (red, green, blue ) => {
+        const redHex = red.toString(16).padStart(2, '0')
+        const greenHex = green.toString(16).padStart(2, '0')
+        const blueHex = blue.toString(16).padStart(2, '0')
+        return `#${redHex}${greenHex}${blueHex}`
+    }
+    console.log(convertRgbToHex(5, 55, 175))
+
+    //40. 
+    const generateColors = (rgbOrHex, numberofcolors) => {
+        let colors = []
+        if (rgbOrHex === 'rgb') {
+            for (let i = 0; i < numberofcolors; i++) {
+                let newAddedColor = ''
+                for (let j = 0; j < 1; j++) {
+                    let red = Math.floor(Math.random() * 255)
+                    let green = Math.floor(Math.random() * 255)
+                    let blue = Math.floor(Math.random() * 255)
+                    newAddedColor += `rgb(${red},${green},${blue})`
+                }
+                colors.push(newAddedColor)
+            }
+            return colors
+        }
+        else {
+            const hexDigits = '0123456789ABCDEF'
+            for (let i = 0; i < numberofcolors; i++) {
+                newAddedColor = ''
+                    for (let k = 0; k < 6; k++) {
+                        newAddedColor += hexDigits[Math.floor(Math.random() * hexDigits.length)]
+                    }
+                colors.push(newAddedColor)
+                }
+                
+        }
+        return colors
+    }
+
+    console.log(generateColors('hex', 2))
+
+    //41.
+    const shuffleArray = (array) => {
+        const shuffledArray = [...array]
+        let currentIndex = shuffledArray.length
+        while (currentIndex > 0) {
+            const randomIndex = Math.floor(Math.random() * currentIndex) 
+            currentIndex--
+            
+            [shuffledArray[currentIndex], shuffledArray[randomIndex]] = [shuffledArray[randomIndex], shuffledArray[currentIndex]]
+        }
+        return shuffledArray
+    }
+    let sampleArrayForRandom = ['apple', 'banana', 'orange', 'mango','watermelon', 'grapes', 'peach']
+    console.log(shuffleArray(sampleArrayForRandom))
+
+    //42.
+    const factorial = (number) => {
+        if (number === 0 || number === 1) {
+            return 1;
+        }
+        let factorial = 1
+        for (let i = 2; i <= number; i++) {
+            factorial *= i
+        }
+        return factorial
+    }
+    console.log(factorial(5))
+
+    //43.
+    const isEmpty = (isEmptyOrNot) => {
+        if (isEmptyOrNot === null || isEmptyOrNot === undefined || isEmptyOrNot === '') { 
+            return ('is Empty');
+        }
+        else {
+            return ('Not Empty')
+        }
+    }
+    console.log(isEmpty(''))
+
+    //44. 
+    const sumOfTheNumbers = (...numbers) => {
+        return numbers.reduce((sum, currentNumbers) => {
+            return sum + currentNumbers 
+        }, 0)
+    }
+    console.log(sumOfTheNumbers(5, 2 , 4, 5, 5, 20))
+
+    //45. 
+   
+    const sumOfArrayItems = (array) => {
+        let feedBack
+         if (!Array.isArray(array)) {
+                feedBack = 'Invalid Input: Agrument is not an array'
+         }
+        
+        else if (array.every((eachItem) => typeof eachItem === 'number')) {
+             const total = array.reduce((sum, currentNumber) => sum + currentNumber, 0)
+             feedBack = 'All array items are of number type'
+             return {total, feedBack }
+         }
+             
+         else {
+             const total = array.reduce((sum, currentNumber) => sum + currentNumber, 0)
+             feedBack = 'Array contains non-number type'
+             return {total, feedBack }
+        }
+        
+    return {total: 0 ,feedBack} 
+    }
+
+    let array1234 =[2, 4, 5, 8, 4]
+    console.log(sumOfArrayItems(array1234))
+
+    //46. 
+    const average = (arrayParameter) => {
+        let feedBack = ''
+        if (!Array.isArray(arrayParameter)) {
+            feedBack = 'Invalid Input: Agrument is not an array'
+        }
+        else if (arrayParameter.every((eachItem) => typeof eachItem === 'number')) {
+            const total = arrayParameter.reduce((sum, currentNumber) => sum + currentNumber, 0)
+            const averageOfTheArray = total / arrayParameter.length
+            feedBack = 'All array items are number type'
+            return {averageOfTheArray, feedBack}
+        }
+        else {
+            feedBack = 'Array contains non-number type'
+        }
+       return {averageOfTheArray: 0, feedBack}
+    }
+    const arrayParameter = [2, 4, 6, 8, 9]
+    console.log(average(arrayParameter))
+
+    //47. Question Number 1
+    const modifyArray = (arrayOfFruits) => {
+        if (arrayOfFruits.length >= 5) {
+            arrayOfFruits[4] = arrayOfFruits[4].toUpperCase()
+            return arrayOfFruits
+        }
+        else {
+            return 'Item Not Found'
+        }
+    }
+    arrayOfFruits = ['Avocado', 'Tomato', 'Lemon','Carrot']
+    console.log(modifyArray(arrayOfFruits))
+
+    //47.Question Number 2 
+    const modifyArray1 = (arrayOfCompanies) => {
+        if (arrayOfCompanies.length >= 5) {
+            arrayOfCompanies = arrayOfCompanies.slice(0, 4)
+            return arrayOfCompanies
+        }
+        else {
+            return 'Not Found'
+        }
+    }
+    itCompanies = ['Google', 'Facebook','Apple', 'Amazon','MICROSOFT',  'IBM']
+    console.log(modifyArray1(itCompanies))
+
+    //48.
+    //49.
+    //50.
+    //51.
+    //52.
+    //53.
+    let reverseCountries = (arrayOfCountries) => {
+        let copyOfContriesReverse = arrayOfCountries
+        return copyOfContriesReverse.sort().reverse()
+    }
+    let countriesAnotherExample = ['USA', 'Canada', 'Japan', 'England', 'United States' ]
+ 
+    console.log(reverseCountries(countriesAnotherExample))
+      console.log(countriesAnotherExample)
+
+
+
+
+
+
+
+
+
+}
+
+ 
+
+quizDay7()
+
 
 
 function chatGPT() {
@@ -1975,5 +2796,22 @@ function chatGPT() {
 
     console.log("First Half:", firstHalf);
     console.log("Second Half:", secondHalf);
+
+    //16.
+        const solveLinEquation = (a, b, c, x) => {
+    // Solve for y: y = (-c - ax) / b
+    const y = (-c - a * x) / b;
+    return y;
+    }
+
+    // Example usage
+    const a = 2;
+    const b = 3;
+    const c = -4;
+    const x = 5;
+    const y = solveLinEquation(a, b, c, x);
+
+    console.log(`For x = ${x}, the value of y is ${y}.`);
+
 
 }
