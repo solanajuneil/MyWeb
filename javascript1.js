@@ -2121,7 +2121,7 @@ function quizDay7() {
     //Example of Explicit function 
     const weightOfTheObject = (mass, gravity = 9.81) => (`${mass * gravity} N`)
     console.log(weightOfTheObject(100))
-    */
+    
     
     //1. 
     function fullName() {
@@ -2465,7 +2465,7 @@ function quizDay7() {
         return address
     }
     console.log(userIdGeneratedByUser())
-    */
+    
     
     //35. 
     const rgbColorGenerator = () => {
@@ -2682,22 +2682,327 @@ function quizDay7() {
     console.log(modifyArray1(itCompanies))
 
     //48.
+    const isPrime = (number) => { 
+        if (number <= 1) {
+            return false 
+        }
+
+        for (let i = 2; i < Math.sqrt(number); i++) {
+            if (number % i === 0) {
+                return false 
+            }
+        }
+        return true 
+    }
+    console.log(isPrime(2))
     //49.
+    const areAllUnique = (array) => {
+        const uniqueSet = new Set(array)
+        return uniqueSet.size === array.length
+    }
+    array_sample1 = [1,2,3,4,5]
+    console.log(areAllUnique(array_sample1))
+    array_sample2 = [1, 2, 3, 4, 5, 5 ]
+    console.log(areAllUnique(array_sample2))
     //50.
-    //51.
+    const areAllItemsSameType = (array) => {
+        if (array.lengt === 0) {
+            return true 
+        }
+        
+        const firstElement = typeof array[0]
+        return array.every((element) => typeof element === firstElement)
+    }
+    array_sample =['poe', 'dsf' , 1 ]
+    console.log(areAllItemsSameType(array_sample1))
+    console.log(areAllItemsSameType(array_sample))
+    //51. ChatGPT
     //52.
+    const sevenRandom = () => { 
+        const array = []
+        while (array.length < 7){
+            const randomNumber = Math.floor(Math.random() * 10)
+            if (!array.includes(randomNumber)) {
+                array.push(randomNumber)
+            }
+        }
+        return array
+    }
+    console.log(sevenRandom())
     //53.
     let reverseCountries = (arrayOfCountries) => {
-        let copyOfContriesReverse = arrayOfCountries
+        let copyOfContriesReverse = [...arrayOfCountries];
         return copyOfContriesReverse.sort().reverse()
     }
     let countriesAnotherExample = ['USA', 'Canada', 'Japan', 'England', 'United States' ]
  
     console.log(reverseCountries(countriesAnotherExample))
-      console.log(countriesAnotherExample)
+    console.log(countriesAnotherExample)
 
 
 
+
+
+
+
+
+*/
+}
+
+a = 'Letter A'
+b = 10
+function quizDay8() {
+    /*
+    //Global Scope
+    const letLearnScope = () => {
+        console.log(a, b)
+        if (true) {
+            console.log(a, b)
+        }
+    }
+    letLearnScope()
+
+    //Local Scope
+    const letsLearnScope = () => {
+        a = 'Letter A version 1 '
+        b = 10.1
+        value = false
+        if (true) {
+            let a = 'Letter b '
+            let b = 11
+            let value = true
+            console.log(a, b, value)
+        }
+        console.log(a, b, value)
+    }
+
+    letsLearnScope()
+    console.log(a, b, value)
+
+    //var variable 
+    if (true) {
+        var gravity = 9.81
+        console.log(gravity)
+    }
+    console.log(gravity)
+
+    //var variable example 2 
+    for (var i = 0; i < 3; i++) {
+        console.log(i)//0, 1, 2
+    }
+    console.log(i)//3
+
+    //Example of Object 
+    const emptyObject = {}
+    const rectangle = {
+        length: 20,
+        width: 10
+    }
+    console.log(rectangle)
+    
+    //Example of Object with number, string and etc. 
+    const person = {
+        firstName: 'John',
+        lastName: 'Doe',
+        age: 30,
+        gender: 'male',
+        country: 'Finland',
+        city: 'Helsinki',
+        skills: [
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'React',
+            'Redux',
+            'Node.js',
+        ],
+        isMarried: false,
+        getFullName: function () {
+            return `${this.firstName} ${this.lastName}`
+        }, //Object Method 
+
+        'phone number': '09243671287' // Can only access by using square brackets and key name/s
+    }
+    console.log(person.firstName.concat(' ' + person.lastName))
+    console.log(person.skills.join('\n'))
+    console.log(person["phone number"])
+    console.log(person.getFullName())
+
+    //Setting new key for an object 
+    const person_1 = {
+        firstName: 'Asabeneh',
+        lastName: 'Yetayeh',
+        age: 250,
+        country: 'Finland',
+        city: 'Helsinki',
+        skills: [
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'React',
+            'Node',
+            'MongoDB',
+            'Python',
+            'D3.js'
+        ],
+        getFullName: function () {
+            return `${this.firstName} ${this.lastName}`
+        }
+    }
+    person_1.nationality = 'Ethiopia'
+    person_1.country = 'Germany'
+    person_1.title = 'teacher'
+    person_1.skills.push('Meteor')
+    person_1.skills.push('SaSS')
+    person_1.isMarried = true
+
+    console.log(person_1)
+
+    person_1.getPersonInfo = function (){
+        let skillsWithoutLastSkill = this.skills
+        .splice(0, this.skills.length - 1)
+        .join(', ')
+        let lastSkill = this.skills.splice(this.skills.length - 1)
+        let skills = `${skillsWithoutLastSkill}, and ${lastSkill}`
+        let statement = `Name: ${this.firstName} ${this.lastName}\nAge: ${this.age}\nCountry: ${this.country}\nCity: ${this.city}\nSkills: ${skills}`
+        return statement
+    } 
+    console.log(person_1.getPersonInfo())
+
+    const copyPerson = Object.assign({}, person_1)
+    console.log(copyPerson)
+    copyPerson.firstName = 'Nick'
+    console.log(copyPerson)
+    copyPerson.address = {
+        street: 'Heitamienkatu 16',
+        pobox: 2002,
+        city: 'Helsinki'
+    }   
+    const keysOfThePerson = Object.keys(copyPerson) // Object.keys To get the keys or properties of an object as an array
+    const addressKey = Object.keys(copyPerson.address) // Object.keys To get the keys or properties of an object as array but in specific using (.) 
+    console.log(addressKey)
+    console.log(keysOfThePerson)
+    const values = Object.values(copyPerson)//To get values of an object as an array
+    console.log(values)
+    const entriesOfCopyPerson = Object.entries(copyPerson)//To get the keys and values in an array
+    console.log(entriesOfCopyPerson)
+    console.log(copyPerson.hasOwnProperty('name'))// False
+    console.log(copyPerson.hasOwnProperty('address')) // True 
+    */
+
+    //1. 
+    const dog = {}
+    
+    //2.
+    console.log(dog)    
+
+    //3. 
+    dog.name, dog.legs, dog.age
+    dog.bark = function () { return `woof woof` }
+
+    //4.
+    dog.name = 'Scam'
+    dog.legs = 4
+    dog.age = `${2} years old`
+    console.log(dog)
+    
+    //5.
+    dog.breed = 'Street Dog'
+    dog.getDogInfo = function () {
+        let statement = `Name: ${this.name}\nLegs: ${this.legs}\nAge: ${this.age}\nBark: ${this.bark()} \nBreed: ${this.breed}`
+        return statement
+    }
+    console.log(dog.getDogInfo())
+
+    //6.
+
+    const users = {
+
+        Alex: {
+            email: 'alex@alex.com',
+            skills: ['HTML', 'CSS', 'JavaScript'],
+            age: 20,
+            isLoggedIn: false,
+            points: 30
+        },
+
+        Asab: {
+            email: 'asab@asab.com',
+            skills: ['HTML', 'CSS', 'JavaScript', 'Redux', 'MongoDB', 'Express', 'React', 'Node'],
+            age: 25,
+            isLoggedIn: false,
+            points: 50
+        },
+
+        Brook: {
+            email: 'daniel@daniel.com',
+            skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux'],
+            age: 30,
+            isLoggedIn: true,
+            points: 50
+        },
+
+        Daniel: {
+            email: 'daniel@alex.com',
+            skills: ['HTML', 'CSS', 'JavaScript', 'Python'],
+            age: 20,
+            isLoggedIn: false,
+            points: 40
+        },
+
+        John: {
+            email: 'john@john.com',
+            skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Node.js'],
+            age: 20,
+            isLoggedIn: true,
+            points: 50
+        },
+
+        Thomas: {
+            email: 'thomas@thomas.com',
+            skills: ['HTML', 'CSS', 'JavaScript', 'React'],
+            age: 20,
+            isLoggedIn: false,
+            points: 40
+        },
+
+        Paul: {
+            email: 'paul@paul.com',
+            skills: ['HTML', 'CSS', 'JavaScript', 'MongoDB', 'Express', 'React', 'Node'],
+            age: 20,
+            isLoggedIn: false,
+            points: 40
+        }
+    }
+
+    const user_1 = {
+        Juneil: {
+            email: 'solanajuneil@gmail.com',
+            skills: ['None', 'Student'],
+            age: 21,
+            isLoggedIn: false,
+            points: 20
+        },
+        David: {
+            email: 'david.com',
+            skills: 'None',
+            age: 21,
+            isLoggedIn: false,
+            points: 20
+        }
+    }
+    const userBySkills = Object.values(user_1).reduce((result, user) => {
+        const numberOfSkills = user.skills.length
+        if (!result[numberOfSkills]) {
+               result[numberOfSkills] = []
+        }
+        result[numberOfSkills].push(user)
+
+        return result
+    }, {})
+    
+const masSkillsCount = Math.max(...Object.keys(userBySkills))
+console.log(userBySkills[masSkillsCount])
 
 
 
@@ -2706,11 +3011,7 @@ function quizDay7() {
 
 }
 
- 
-
-quizDay7()
-
-
+quizDay8()
 
 function chatGPT() {
     const text = 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
@@ -2813,5 +3114,12 @@ function chatGPT() {
 
     console.log(`For x = ${x}, the value of y is ${y}.`);
 
+  //51/.
+    const isValidVariable = (variableName) => {
+    // Regular expression pattern to match valid variable names
+     const pattern = /^[a-zA-Z_$][a-zA-Z0-9_$]*$/;
+
+    return pattern.test(variableName);
+    };
 
 }
